@@ -6,7 +6,8 @@
   "scripts": {
     "start": "nodemon --inspect ./src/index.js",
     "watch": "node-sass --watch src/resources/scss/app.scss src/public/styles/style.css",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky install"
   },
   "author": "",
   "license": "ISC",
@@ -16,5 +17,15 @@
     "morgan": "^1.10.0",
     "node-sass": "^9.0.0",
     "nodemon": "^2.0.22"
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown",
+    "*.{js,css,md}": "prettier --write"
+  },
+  "devDependencies": {
+    "eslint-config-prettier": "^9.0.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^14.0.1",
+    "prettier": "3.0.3"
   }
 }
