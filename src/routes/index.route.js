@@ -1,7 +1,7 @@
-const newsRouter = require('./news.route');
+const productsRouter = require('./products.route');
 
 const route = (app) => {
-  app.use('/news', newsRouter);
+  app.use('/products', productsRouter);
 
   app.get('/', (req, res) => {
     res.render('pages/home');
