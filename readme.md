@@ -1,1 +1,1 @@
-test .husky
+test .husky v2
