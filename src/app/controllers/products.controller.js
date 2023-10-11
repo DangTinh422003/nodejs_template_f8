@@ -1,18 +1,20 @@
 const productsModel = require('../models/products.model');
 
 class ProductsController {
-  // [GET] /news
+  // [GET] /products
   index = (req, res) => {
-    res.render('pages/products');
+    res.render('pages/products.hbs');
   };
 
-  // [GET] /news/:slug
+  // [GET] /products/:slug
   show = (req, res) => {
+    let data = '';
     (async () => {
       const query = await productsModel.find({});
-      console.log(query);
+      data = JSON.stringify(query);
+      console.log(data);
     })();
-    res.send('oke');
+    res.render('pages/products.hbs', { data: data });
   };
 }
 
