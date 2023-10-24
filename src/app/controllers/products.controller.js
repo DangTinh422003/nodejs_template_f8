@@ -4,6 +4,9 @@ class ProductsController {
   // [GET] /products
   index = (req, res) => {
     res.render('pages/products.hbs');
+
+    const { password, username } = req.body;
+    // hash password
   };
 
   // [GET] /products/:slug
